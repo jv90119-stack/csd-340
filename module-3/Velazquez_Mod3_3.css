@@ -10,27 +10,78 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* The h1 title must be centered on the page */
 h1 {
-    text-align: center; /* Center the text on the page */
+    text-align: center;
 }
 
-#left-div, #right-div {
+/* Set the weight of the h3 tags to 500 */
+h3 {
+    font-weight: 500;
+    margin-top: 0;
+}
+
+/* The side-by-side divs must have a width of 45% */
+#left-div,
+#right-div {
     width: 45%;
     display: inline-block;
     vertical-align: top;
 }
 
-#left-div {
-    margin-right: 5%;
+/* Set the weight of the lists to 300 */
+ol,
+ul {
+    font-weight: 300;
 }
 
-#bottom-div {
-    width: 100%;
-    margin-top: 60%;
+/* Apply a 1px solid red border with a 15px border-radius to the ordered list and its title */
+#left-div h3,
+#left-div ol {
+    border: 1px solid red;
+    border-radius: 15px;
 }
 
-#bottom-div a {
-    float: right; /* Link floated to the right */
+/* Give the ordered list a padding of 10px and keep numbers inside the border */
+#left-div ol {
+    padding: 10px;
+    list-style-position: inside;
+    margin: 0;
+}
+
+/* Apply 1px dashed red border with a 15px border-radius to the unordered list and its title */
+#right-div h3,
+#right-div ul {
+    border: 1px dashed red;
+    border-radius: 15px;
+}
+
+/* Give the unordered list a padding of 10px and change bullet points to upper-roman */
+#right-div ul {
+    padding: 10px;
+    list-style-type: upper-roman;
+    list-style-position: inside;
+    margin: 0;
+}
+
+/* Add :hover to the links and show underlines on hover */
+a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
+/* Set the width of the last div to 100% and margin-top to 60% */
+#bottom-div {
+    width: 100%;
+    margin-top: 60%;
+    float: right;         /* Give the bottom div a css value of float right */
+    margin-bottom: 20px;  /* and a margin-bottom of 20px */
+}
+
+/* Keep the link floated right inside the bottom div as well */
+#bottom-div a {
+    float: right;
+}
