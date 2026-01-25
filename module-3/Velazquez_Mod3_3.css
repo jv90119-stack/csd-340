@@ -1,1 +1,36 @@
+/* JOSE VELAZQUEZ */
+/* MODULE 3.3 ASSIGNMENT */
+
+
+/* Velazquez_Mod3_3.css */
+
+#container {
+    width: 100%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center; /* Center the text on the page */
+}
+
+#left-div, #right-div {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#left-div {
+    margin-right: 5%;
+}
+
+#bottom-div {
+    width: 100%;
+    margin-top: 60%;
+}
+
+#bottom-div a {
+    float: right; /* Link floated to the right */
+    text-decoration: none;
+}
 
