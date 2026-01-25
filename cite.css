@@ -1,1 +1,30 @@
+/* Container styling */
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
 
+/* Heading styles */
+h1, h2, h3, h4 {
+    background-color: #2f3e46;   /* dark blue-gray */
+    color: #ffffff;              /* high contrast text */
+    border: 1px solid #D6A800;    /* required border color */
+    padding: 10px;
+}
+
+/* Anchor (link) styles */
+a {
+    color: #3a5a40;              /* blends with scheme */
+    text-decoration: none;
+}
+
+/* Hover state */
+a:hover {
+    color: #D6A800;              /* gold accent on hover */
+}
+
+/* Visited links */
+a:visited {
+    color: #588157;              /* muted green */
+}
