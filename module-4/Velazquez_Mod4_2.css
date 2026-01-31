@@ -1,28 +1,55 @@
-/* Apply a CSS grid with three columns for the 3 side-by-side divs */
-#image-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;              /* optional spacing between columns */
-  margin-top: 10%;        /* Give the image-gallery div a margin-top of 10% */
+/* Basic page styling (optional but safe) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main container */
+#container {
+  width: 90%;
+  margin: 0 auto;
 }
 
 /* Center the h1 text */
 h1 {
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-/* Center the h3 text (title for each of the image gallery items) */
+/* Image gallery grid */
+#image-gallery {
+  display: grid;                          /* CSS grid */
+  grid-template-columns: repeat(3, 1fr);  /* three columns */
+  margin-top: 10%;                        /* margin-top of 10% */
+  gap: 20px;                              /* spacing between the 3 columns (optional) */
+}
+
+/* Center the h3 text */
 h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Center the image (and caption) inside each figure */
+figure {
   text-align: center;
 }
 
-/* Center the image inside each gallery item */
-figure {
-  text-align: center;     /* centers the image and caption within the figure */
-}
-
-/* Italic caption and smaller font */
+/* Italic caption and smaller font size */
 figcaption {
   font-style: italic;
   font-size: 0.75em;
+  margin-top: 6px;
+}
+
+/* Optional: keep images a consistent size */
+#image-gallery img {
+  width: 150px;
+  height: auto;
 }
