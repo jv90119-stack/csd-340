@@ -27,11 +27,12 @@ h1 {
 }
 
 /* Image gallery grid */
-image-gallery {
+#image-gallery {
   display: grid;                          
   grid-template-columns: repeat(3, 1fr); 
   margin-top: 10%;                        
-  gap: 20px;                              
+  gap: 20px;  
+}
 
 /* Center the h3 text */
 h3 {
