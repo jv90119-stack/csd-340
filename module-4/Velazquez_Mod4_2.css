@@ -1,4 +1,8 @@
-/* Basic page styling (optional but safe) */
+/* JOSE VELAZQUEZ */
+/* MODULE 4.2 ASSIGNMENT */
+
+
+/* Page Styling */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,11 +28,10 @@ h1 {
 
 /* Image gallery grid */
 #image-gallery {
-  display: grid;                          /* CSS grid */
-  grid-template-columns: repeat(3, 1fr);  /* three columns */
-  margin-top: 10%;                        /* margin-top of 10% */
-  gap: 20px;                              /* spacing between the 3 columns (optional) */
-}
+  display: grid;                          
+  grid-template-columns: repeat(3, 1fr); 
+  margin-top: 10%;                        
+  gap: 20px;                              
 
 /* Center the h3 text */
 h3 {
@@ -36,7 +39,7 @@ h3 {
   margin-bottom: 10px;
 }
 
-/* Center the image (and caption) inside each figure */
+/* Center the image inside each figure */
 figure {
   text-align: center;
 }
@@ -48,7 +51,7 @@ figcaption {
   margin-top: 6px;
 }
 
-/* Optional: keep images a consistent size */
+/* Keep images a consistent size */
 #image-gallery img {
   width: 150px;
   height: auto;
