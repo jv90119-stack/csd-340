@@ -1,67 +1,28 @@
-:root{
-  --accent: #c84a18;   /* orange tone similar to screenshot */
+/* Apply a CSS grid with three columns for the 3 side-by-side divs */
+#image-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;              /* optional spacing between columns */
+  margin-top: 10%;        /* Give the image-gallery div a margin-top of 10% */
 }
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body{
-  font-family: Arial, Helvetica, sans-serif;
-  background: #fff;
-  color: #333;
-}
-
-/* Title */
-h1{
+/* Center the h1 text */
+h1 {
   text-align: center;
-  color: var(--accent);
-  font-size: 40px;
-  font-weight: 500;
-  margin: 28px 0 30px;
 }
 
-/* Outer box with 3 columns */
-.book-row{
-  width: min(1000px, 92vw);
-  margin: 0 auto 40px;
-  border: 2px solid var(--accent);
-  display: flex;
-}
-
-/* Each column */
-.book{
-  flex: 1;
+/* Center the h3 text (title for each of the image gallery items) */
+h3 {
   text-align: center;
-  padding: 26px 10px 22px;
 }
 
-/* Vertical dividers */
-.book + .book{
-  border-left: 2px solid var(--accent);
+/* Center the image inside each gallery item */
+figure {
+  text-align: center;     /* centers the image and caption within the figure */
 }
 
-/* Book titles */
-.book h2{
-  color: var(--accent);
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 18px;
-}
-
-/* Cover images */
-.book img{
-  width: 120px;       /* adjust if your images are different */
-  height: auto;
-  display: block;
-  margin: 0 auto 14px;
-}
-
-/* Author line */
-.author{
-  color: var(--accent);
+/* Italic caption and smaller font */
+figcaption {
   font-style: italic;
-  font-size: 13px;
+  font-size: 0.75em;
 }
