@@ -90,7 +90,6 @@ footer {
   position: absolute;        /* absolute */
   bottom: 0;                 /* bottom 0 */
   width: 100%;               /* width 100% */
-  padding: 12px 0;
 }
 
 /* footer p */
@@ -100,7 +99,6 @@ footer p {
   float: right;          /* float right */
   padding-right: 10px;   /* right padding 10px */
   font-style: italic;    /* italic */
-  margin: 0;
 }
 
 /* footer a */
