@@ -103,15 +103,6 @@ footer p {
   margin: 0;
 }
 
-/* Support your current HTML (footer link without a <p>) */
-footer .portal-link {
-  color: #ffffff;
-  font-weight: 400;
-  float: right;
-  padding-right: 10px;
-  font-style: italic;
-}
-
 /* footer a */
 footer a {
   text-decoration: none; /* remove underline */
