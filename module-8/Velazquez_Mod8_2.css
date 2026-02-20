@@ -1,5 +1,5 @@
 /* JOSE VELAZQUEZ */
-/* MODULE 6.2 ASSIGNMENT */
+/* MODULE 8.2 ASSIGNMENT */
 
 * {
   box-sizing: border-box;
@@ -20,7 +20,7 @@ header {
 
 /* h1 */
 h1 {
-  font-weight: 400;           
+  font-weight: 400;
 }
 
 /* navbar */
@@ -48,9 +48,7 @@ h1 {
 
 /* container div */
 #container {
-  margin-top: 2%;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 2% 5% 100px;
   padding: 10px;
 }
 
@@ -64,7 +62,7 @@ h1 {
   overflow: hidden;
 }
 
-/* When users hover over the card... */
+/* When users hover over the card */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
@@ -83,21 +81,46 @@ h1 {
   padding: 2px 16px;
 }
 
+/* #movies */
+#movies {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* For the movies */
+#movies th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+}
+
+/* For the movies td */
+#movies td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
 /* footer element */
 footer {
   background-color: #2b2d42;
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
+  padding: 10px 20px;
+
+  display: flex;                
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* footer p */
+/* footer text */
 footer p {
   color: #ffffff;
   font-weight: 400;
-  float: right;
-  padding-right: 10px;
   font-style: italic;
+  margin: 0;
 }
 
 /* footer a */
