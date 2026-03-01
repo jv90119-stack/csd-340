@@ -1,1 +1,60 @@
+/* Velazquez_Mod2_2.css */
 
+/* Set the html and body font size to 16px */
+html,
+body {
+  font-size: 16px;
+}
+
+/* Paragraph styling */
+p {
+  font-weight: 400;
+  line-height: 1.4em;
+}
+
+/* Heading weights */
+h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 500;
+  text-align: left;
+  padding-top: 15px;
+}
+
+/* Address alignment */
+address {
+  text-align: center;
+}
+
+/* Website link styling (inside address) */
+address a {
+  font-weight: bold;
+  font-size: 1.25em;
+  color: #4F3674;
+  text-decoration: none;
+}
+
+/* Hover pseudo-class */
+address a:hover {
+  text-decoration: underline;
+  background-color: #D6A800;
+}
+
+/* Visited pseudo-class (styling of your choosing) */
+address a:visited {
+  color: #2B2D42;
+}
+
+/* Sentence class */
+.sentence {
+  font-style: italic;
+}
+
+/* Intro class (first paragraph only) */
+.intro {
+  text-indent: 2em;
+}
