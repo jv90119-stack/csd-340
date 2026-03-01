@@ -1,56 +1,73 @@
-<!-- Velazquez_Mod2_2.html -->
+<!-- LastName_Mod9_3.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="CSD 340 Module 2.2 Assignment page" />
-  <meta name="keywords" content="CSD 340, HTML, CSS, Bellevue University" />
-  <meta name="author" content="Your Name" />
+  <meta name="description" content="CSD 340 Module 9.3 Assignment page" />
+  <meta name="keywords" content="CSD 340, HTML, CSS, JavaScript" />
+  <meta name="author" content="Jose Velazquez" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>CSD 340 Development with HTML and CSS</title>
-
-  <!-- Link to CSS file -->
-  <link rel="stylesheet" href="Velazquez_Mod2_2.css" />
-</head>
+  <title>CSD 340 Web Development with HTML and CSS</title>
 
 <body>
   <div id="container">
-    <h1>Assignment 2.2 – Building a Web Page Exercise, Part 2</h1>
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
 
-    <h2>Chapter 1: A Little About Me</h2>
+    <h2>Chapter: A Short Story</h2>
 
-    <p class="intro">
-      I was born in a small town in Mexico and immigrated to United States when I was 3 years old. I grew up a few minutes outside of Boston, Massachusetts. 
-      I loved growing up close to the city and learned a lot about its history and grew close to the Boston culture. 
+    <p>
+      When I first started learning web development, I thought the hardest part would be writing the code.
+      What surprised me most was how much creativity goes into the process.
+      Every page feels like building something from scratch that people can interact with.
     </p>
 
     <p>
-      After living in Boston for about 13 years my family decided that it was time for a change. We moved to Florida when I was 16. While we were still in 
-      the same country I needed to get used to a new city and lifestyle altogether. It was a big change for me and I did not like it at first. Overtime I was
-      able to overcome those challenges and I grew to like the change. In the future I hope to make a move back north becuase that is where I truly belong. 
+      Over the course of this term there has been challenges with learning how to make a webpage that interacts with the users.
+      By that, I mean that webpages must also <span id="word1">__________</span> with the user and call to them to keep them engaged. 
+      It was intersting to learn about how users want webpages to interact with them on a <span id="word2">__________</span> level. 
+      When I first started I had not idea it went this deep, but it helped me understand what good webpage design looks like. 
     </p>
 
     <p>
-      In my free time, I like to run and discover new music. I am a big record collector and am always on the hunt for new ones to spin. 
-      I spend a lot of time improving my running skills as I hope to run a marathon one day in under 3 hours.
-      One thing I have learned is that <span class="sentence">progress comes faster when you practice a little every day.</span>
-    </p>
-
-    <p>
-      Family has always been important to me, and I try to make time for the people who support me.
-      I also like setting goals and working toward them step by step, whether it is school, personal projects, or fitness.
-      Overall, I am focused on learning, growing, and creating work I can be proud of.
+      By the end, I realized learning web development is a lot like learning a new skill in real life:
+      it is <span id="word3">__________</span> at first, then it started to click, and finally I learned design on a deeper level.
+      That is what it takes to be a good <span id="word4">__________</span>. I hope to continue to develop these skills for the future. 
     </p>
 
     <hr />
 
-    <address>
-      <p>
-        <a href="https://www.bellevue.edu" target="_blank" rel="noopener noreferrer">Bellevue University</a>
-      </p>
-      <p>1000 Galvin Road South</p>
-      <p>Bellevue, NE 68005</p>
-    </address>
+    <div class="buttons">
+      <button type="button" onclick="revealWord1()">Reveal Word 1</button>
+      <button type="button" onclick="revealWord2()">Reveal Word 2</button>
+      <button type="button" onclick="revealWord3()">Reveal Word 3</button>
+      <button type="button" onclick="revealWord4()">Reveal Word 4</button>
+    </div>
   </div>
+
+  <script>
+    // Four JavaScript variables holding the string inputs for the span tags
+    const w1 = "interact";
+    const w2 = "psychological";
+    const w3 = "confusing";
+    const w4 = "designer";
+
+    // Each button replaces the underscores with the correct word
+    function revealWord1() {
+      document.getElementById("word1").textContent = w1;
+    }
+
+    function revealWord2() {
+      document.getElementById("word2").textContent = w2;
+    }
+
+    function revealWord3() {
+      document.getElementById("word3").textContent = w3;
+    }
+
+    function revealWord4() {
+      document.getElementById("word4").textContent = w4;
+    }
+  </script>
 </body>
 </html>
