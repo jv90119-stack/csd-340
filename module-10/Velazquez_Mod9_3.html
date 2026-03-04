@@ -1,75 +1,110 @@
 <!-- JOSE VELAZQUEZ -->
-<!-- MODULE 9.3 ASSIGNMENT -->
+<!-- MODULE 10.3 ASSIGNMENT -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="description" content="CSD 340 Module 9.3 Assignment page" />
+  <meta name="description" content="CSD 340 Module 10.3 Assignment page" />
   <meta name="keywords" content="CSD 340, HTML, CSS, JavaScript" />
   <meta name="author" content="Jose Velazquez" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>CSD 340 Web Development with HTML and CSS</title>
 
-<head>
-    <script>
-      function displayImage(imageFile){
-        var largerImage = document.getElementById("mainImage");
-        var newNode = document.createElement("img");
-        newNode.id = "mainImage";
-        newNode.src = imageFile;
-        newNode.alt = "Large Image";
-        newNode.className = "mainImage";
-        newNode.style.width = "300px";
-        newNode.style.height = "200px";
-        largerImage.parentNode.replaceChild(newNode, largerImage);
-        
+  <script>
+    /**
+     * Executed when a thumbnail image is clicked (onclick MouseEvent).
+     * Updates the main display based on user input.
+     */
+    function chooseScene(imageFile, titleText, descriptionText) {
+      const mainImage = document.getElementById("mainImage");
+      const sceneTitle = document.getElementById("sceneTitle");
+      const sceneDesc = document.getElementById("sceneDesc");
+
+      if (mainImage) {
+        mainImage.src = imageFile;
       }
-    </script>
+      if (sceneTitle) {
+        sceneTitle.textContent = titleText;
+      }
+      if (sceneDesc) {
+        sceneDesc.textContent = descriptionText;
+      }
+    }
+  </script>
+</head>
 
-    <link rel='stylesheet' type='text/css' href='body1.css' />
+<body>
+  <div id="container">
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
 
-  </head>
+    <h2 id="sceneTitle">Click a Scene</h2>
+    <p id="sceneDesc">
+      Choose an image below to change the main display. Each click updates the image and the story text.
+    </p>
 
-  <body>
-    <br />
-    <div>
-      <a href=#
-         onmouseover="cave.src='cave_01.jpg';"
-         onmouseout= "cave.src='cave_02.jpg';"
-      >
-        <img border = 0 name = "cave" src = "cave_02.jpg">
-      </a>
-    </div>
-    <br />
-    <div
-         onmouseover="this.style.color='red';"
-         onmouseout= "this.style.color='black';">
-
-      Run your mouse over the image to change.
-      <br />
-
-    </div>
-    <div>
-      <a href=#
-         onmouseover="moon.src='moon_01.jpg';"
-         onmouseout= "moon.src='moon_02.jpg';"
-      >
-        <img border = 0 name = "moon" src = "moon_02.jpg">
-      </a>
-    </div>
-    <br />
-    <div
-         onmouseover="this.style.color='red';"
-         onmouseout= "this.style.color='black';">
-
-      Run your mouse over the image to change.
-      <br />
-      Right-click and select View Source for more details.
-
+    <!-- Main display area -->
+    <div class="main-image-wrap">
+      <img
+        id="mainImage"
+        class="mainImage"
+        src="scene_default.jpg"
+        alt="Selected scene"
+        width="420"
+        height="280"
+      />
     </div>
 
-  </body>
+    <hr />
 
+    <h3>Pick Your Adventure</h3>
+
+    <!-- Thumbnails (use your own graphics/images) -->
+    <div class="thumbs">
+      <img
+        class="thumb"
+        src="scene_forest_thumb.jpg"
+        alt="Forest scene thumbnail"
+        width="140"
+        height="90"
+        onclick="chooseScene(
+          'scene_forest.jpg',
+          'Scene 1: The Forest Trail',
+          'You step onto a quiet trail where the trees form a tunnel of green overhead. The air feels cooler, and everything is calm.'
+        )"
+      />
+
+      <img
+        class="thumb"
+        src="scene_city_thumb.jpg"
+        alt="City scene thumbnail"
+        width="140"
+        height="90"
+        onclick="chooseScene(
+          'scene_city.jpg',
+          'Scene 2: Neon City',
+          'Lights flicker across the street as the city comes alive. You hear distant music, passing footsteps, and the buzz of late-night energy.'
+        )"
+      />
+
+      <img
+        class="thumb"
+        src="scene_beach_thumb.jpg"
+        alt="Beach scene thumbnail"
+        width="140"
+        height="90"
+        onclick="chooseScene(
+          'scene_beach.jpg',
+          'Scene 3: Sunset Beach',
+          'Waves roll in slowly while the sun drops toward the horizon. The sky shifts into warm colors and the day feels like it is exhaling.'
+        )"
+      />
+    </div>
+
+    <p class="note">
+      Tip: Replace the image filenames above with your own original graphics (photos you took, drawings, or custom images).
+    </p>
+  </div>
+</body>
 </html>
