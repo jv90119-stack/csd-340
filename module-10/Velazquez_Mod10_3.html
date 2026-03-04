@@ -39,9 +39,9 @@
   <div id="container">
     <h1>Assignment 10.3: JavaScript - Part 2</h1>
 
-    <h2 id="sceneTitle">Click a Scene</h2>
+    <h2 id="sceneTitle">Click a City</h2>
     <p id="sceneDesc">
-      Choose an image below to change the main display. Each click updates the image and the story text.
+      Choose an image below to change the main display. Each click updates the image and the text.
     </p>
 
     <!-- Main display area -->
@@ -60,51 +60,47 @@
 
     <h3>Pick Your Adventure</h3>
 
-    <!-- Thumbnails (use your own graphics/images) -->
+    <!-- Thumbnails -->
     <div class="thumbs">
       <img
         class="thumb"
-        src="scene_forest_thumb.jpg"
-        alt="Forest scene thumbnail"
+        src="new_york.jpg"
+        alt="New York"
         width="140"
         height="90"
         onclick="chooseScene(
-          'scene_forest.jpg',
-          'Scene 1: The Forest Trail',
-          'You step onto a quiet trail where the trees form a tunnel of green overhead. The air feels cooler, and everything is calm.'
+          'new_york.jpg',
+          'City 1: New York City',
+          'New York City skyline. One of the most iconic in the world.'
         )"
       />
 
       <img
         class="thumb"
-        src="scene_city_thumb.jpg"
-        alt="City scene thumbnail"
+        src="seattle.jpg"
+        alt="Seattle"
         width="140"
         height="90"
         onclick="chooseScene(
-          'scene_city.jpg',
-          'Scene 2: Neon City',
-          'Lights flicker across the street as the city comes alive. You hear distant music, passing footsteps, and the buzz of late-night energy.'
+          'seattle.jpg',
+          'City 2: Seattle',
+          'Seattle skyline. Underrated city. Has lots to offer and has a culture of its own.'
         )"
       />
 
       <img
         class="thumb"
-        src="scene_beach_thumb.jpg"
-        alt="Beach scene thumbnail"
+        src="chicago.jpg"
+        alt="Chicago"
         width="140"
         height="90"
         onclick="chooseScene(
-          'scene_beach.jpg',
-          'Scene 3: Sunset Beach',
-          'Waves roll in slowly while the sun drops toward the horizon. The sky shifts into warm colors and the day feels like it is exhaling.'
+          'chicago.jpg',
+          'City 3: Chicago',
+          'Chicago skyline. Aruguably one of the biggest in the country.'
         )"
       />
     </div>
-
-    <p class="note">
-      Tip: Replace the image filenames above with your own original graphics (photos you took, drawings, or custom images).
-    </p>
   </div>
 </body>
 </html>
