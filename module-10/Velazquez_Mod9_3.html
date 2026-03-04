@@ -12,64 +12,67 @@
 
   <title>CSD 340 Web Development with HTML and CSS</title>
 
-<body>
-  <div id="container">
-    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+<head>
+    <title>
+      Example 10
+    </title>
+    <script>
+      function displayImage(imageFile){
+        var largerImage = document.getElementById("mainImage");
+        var newNode = document.createElement("img");
+        newNode.id = "mainImage";
+        newNode.src = imageFile;
+        newNode.alt = "Large Image";
+        newNode.className = "mainImage";
+        newNode.style.width = "300px";
+        newNode.style.height = "200px";
+        largerImage.parentNode.replaceChild(newNode, largerImage);
+        
+      }
+    </script>
 
-    <h2>Chapter: A Short Story</h2>
+    <link rel='stylesheet' type='text/css' href='body1.css' />
 
-    <p>
-      When I first started learning web development, I thought the hardest part would be writing the code.
-      What surprised me most was how much creativity goes into the process.
-      Every page feels like building something from scratch that people can interact with.
-    </p>
+  </head>
 
-    <p>
-      Over the course of this term there has been challenges with learning how to make a webpage that interacts with the users.
-      By that, I mean that webpages must also <span id="word1">__________</span> with the user and call to them to keep them engaged. 
-      It was intersting to learn about how users want webpages to interact with them on a <span id="word2">__________</span> level. 
-      When I first started I had not idea it went this deep, but it helped me understand what good webpage design looks like. 
-    </p>
-
-    <p>
-      By the end, I realized learning web development is a lot like learning a new skill in real life:
-      it is <span id="word3">__________</span> at first, then it started to click, and finally I learned design on a deeper level.
-      That is what it takes to be a good <span id="word4">__________</span>. I hope to continue to develop these skills for the future. 
-    </p>
-
-    <hr />
-
-    <div class="buttons">
-      <button type="button" onclick="revealWord1()">Reveal Word 1</button>
-      <button type="button" onclick="revealWord2()">Reveal Word 2</button>
-      <button type="button" onclick="revealWord3()">Reveal Word 3</button>
-      <button type="button" onclick="revealWord4()">Reveal Word 4</button>
+  <body>
+    <br />
+    <div>
+      <a href=#
+         onmouseover="cave.src='cave_01.jpg';"
+         onmouseout= "cave.src='cave_02.jpg';"
+      >
+        <img border = 0 name = "cave" src = "cave_02.jpg">
+      </a>
     </div>
-  </div>
+    <br />
+    <div
+         onmouseover="this.style.color='red';"
+         onmouseout= "this.style.color='black';">
 
-  <script>
-    // Four JavaScript variables holding the string inputs for the span tags
-    const w1 = "interact";
-    const w2 = "psychological";
-    const w3 = "confusing";
-    const w4 = "designer";
+      Run your mouse over the image to change.
+      <br />
 
-    // Each button replaces the underscores with the correct word
-    function revealWord1() {
-      document.getElementById("word1").textContent = w1;
-    }
+    </div>
+    <div>
+      <a href=#
+         onmouseover="moon.src='moon_01.jpg';"
+         onmouseout= "moon.src='moon_02.jpg';"
+      >
+        <img border = 0 name = "moon" src = "moon_02.jpg">
+      </a>
+    </div>
+    <br />
+    <div
+         onmouseover="this.style.color='red';"
+         onmouseout= "this.style.color='black';">
 
-    function revealWord2() {
-      document.getElementById("word2").textContent = w2;
-    }
+      Run your mouse over the image to change.
+      <br />
+      Right-click and select View Source for more details.
 
-    function revealWord3() {
-      document.getElementById("word3").textContent = w3;
-    }
+    </div>
 
-    function revealWord4() {
-      document.getElementById("word4").textContent = w4;
-    }
-  </script>
-</body>
+  </body>
+
 </html>
