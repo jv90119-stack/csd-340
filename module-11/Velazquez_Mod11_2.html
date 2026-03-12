@@ -1,3 +1,189 @@
 <!-- JOSE VELAZQUEZ -->
 <!-- MODULE 11.2 ASSIGNMENT -->
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="CSD 340 Module 11.2 Assignment page" />
+  <meta name="keywords" content="CSD 340, HTML, CSS, JavaScript, To Do List" />
+  <meta name="author" content="Jose Velazquez" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CSD 340 Web Development with HTML and CSS</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    #container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333333;
+    }
+
+    p {
+      color: #555555;
+      line-height: 1.6;
+    }
+
+    .input-area {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      min-width: 250px;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #cccccc;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 12px 18px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #4f3674;
+      color: white;
+    }
+
+    button:hover {
+      background-color: #6a4c93;
+    }
+
+    #displayArea {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #fafafa;
+      border: 1px solid #dddddd;
+      border-radius: 8px;
+    }
+
+    #displayArea h2 {
+      margin-top: 0;
+      color: #333333;
+    }
+
+    ol {
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+    <p>
+      Enter a task in the text box below and click <strong>Add</strong> to place it in your To Do List.
+      Click <strong>Sort</strong> to arrange the list in alphabetical order.
+      Click <strong>Delete Last Entry</strong> to remove the most recently added item.
+    </p>
+
+    <div class="input-area">
+      <input type="text" id="todoInput" placeholder="Enter a task..." />
+      <button onclick="addItem()">Add</button>
+      <button onclick="deleteLastItem()">Delete Last Entry</button>
+      <button onclick="sortItems()">Sort</button>
+    </div>
+
+    <div id="displayArea">
+      <h2>Things To Do:</h2>
+      <div id="todoListDisplay">Your list is currently empty.</div>
+    </div>
+  </div>
+
+  <script>
+    let todoArray = [];
+
+    function addToArray(item) {
+      todoArray.push(item);
+    }
+
+    function deleteFromArray() {
+      return todoArray.pop();
+    }
+
+    function sortArray() {
+      todoArray.sort();
+    }
+
+    function displayArray() {
+      const display = document.getElementById("todoListDisplay");
+
+      if (todoArray.length === 0) {
+        display.innerHTML = "Your list is currently empty.";
+        return;
+      }
+
+      let output = "<ol>";
+      for (let i = 0; i < todoArray.length; i++) {
+        output += "<li>" + todoArray[i] + "</li>";
+      }
+      output += "</ol>";
+
+      display.innerHTML = output;
+    }
+
+    function addItem() {
+      const inputBox = document.getElementById("todoInput");
+      const userInput = inputBox.value.trim();
+
+      if (userInput === "") {
+        alert("Please enter a task before clicking Add.");
+        return;
+      }
+
+      addToArray(userInput);
+      alert('Added: "' + userInput + '"');
+      inputBox.value = "";
+      displayArray();
+    }
+
+    function deleteLastItem() {
+      if (todoArray.length === 0) {
+        alert("There are no items to delete.");
+        return;
+      }
+
+      const deletedItem = deleteFromArray();
+      alert('Deleted: "' + deletedItem + '"');
+      displayArray();
+    }
+
+    function sortItems() {
+      if (todoArray.length === 0) {
+        alert("There are no items to sort.");
+        return;
+      }
+
+      sortArray();
+      alert("The To Do List has been sorted.");
+      displayArray();
+    }
+  </script>
+</body>
+</html>
