@@ -1,0 +1,106 @@
+<!-- JOSE VELAZQUEZ -->
+<!-- MODULE 10.3 ASSIGNMENT -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="CSD 340 Module 10.3 Assignment page" />
+  <meta name="keywords" content="CSD 340, HTML, CSS, JavaScript" />
+  <meta name="author" content="Jose Velazquez" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CSD 340 Web Development with HTML and CSS</title>
+
+  <script>
+    /**
+     * Executed when a thumbnail image is clicked (onclick MouseEvent).
+     * Updates the main display based on user input.
+     */
+    function chooseScene(imageFile, titleText, descriptionText) {
+      const mainImage = document.getElementById("mainImage");
+      const sceneTitle = document.getElementById("sceneTitle");
+      const sceneDesc = document.getElementById("sceneDesc");
+
+      if (mainImage) {
+        mainImage.src = imageFile;
+      }
+      if (sceneTitle) {
+        sceneTitle.textContent = titleText;
+      }
+      if (sceneDesc) {
+        sceneDesc.textContent = descriptionText;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div id="container">
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+    <h2 id="sceneTitle">Click a City</h2>
+    <p id="sceneDesc">
+      Choose an image below to change the main display. Each click updates the image and the text.
+    </p>
+
+    <!-- Main display area -->
+    <div class="main-image-wrap">
+      <img
+        id="mainImage"
+        class="mainImage"
+        src="placeholder.jpg"
+        alt="Selected scene"
+        width="420"
+        height="280"
+      />
+    </div>
+
+    <hr />
+
+    <h3>Click Any City Below</h3>
+
+    <!-- Thumbnails -->
+    <div class="thumbs">
+      <img
+        class="thumb"
+        src="new_york.jpg"
+        alt="New York"
+        width="140"
+        height="90"
+        onclick="chooseScene(
+          'new_york.jpg',
+          'City 1: New York City',
+          'New York City skyline. One of the most iconic in the world.'
+        )"
+      />
+
+      <img
+        class="thumb"
+        src="seattle.jpg"
+        alt="Seattle"
+        width="140"
+        height="90"
+        onclick="chooseScene(
+          'seattle.jpg',
+          'City 2: Seattle',
+          'Seattle skyline. Underrated city. Has lots to offer and has a culture of its own.'
+        )"
+      />
+
+      <img
+        class="thumb"
+        src="chicago.jpg"
+        alt="Chicago"
+        width="140"
+        height="90"
+        onclick="chooseScene(
+          'chicago.jpg',
+          'City 3: Chicago',
+          'Chicago skyline. Aruguably one of the biggest in the country.'
+        )"
+      />
+    </div>
+  </div>
+</body>
+</html>
